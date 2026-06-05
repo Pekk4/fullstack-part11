@@ -1,4 +1,9 @@
-const { TextEncoder, TextDecoder } = require('util')
+import { TextEncoder, TextDecoder } from 'node:util'
 
-global.TextEncoder = TextEncoder
-global.TextDecoder = TextDecoder
+if (!globalThis.TextEncoder) {
+  Object.defineProperty(globalThis, 'TextEncoder', { value: TextEncoder })
+}
+
+if (!globalThis.TextDecoder) {
+  Object.defineProperty(globalThis, 'TextDecoder', { value: TextDecoder })
+}
