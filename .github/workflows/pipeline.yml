@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  lint:
+  checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -16,10 +16,15 @@ jobs:
           node-version: '24'
 
       - name: Install deps
-        run: npm install
+        run: |
+          npm ci
+          npx playwright install --with-deps
 
       - name: Check style       
         run: npm run eslint
 
-      - name: Run tests
+      - name: Run unit tests
         run: npm test
+
+      - name: Run e2e tests
+        run: npm run test:e2e
