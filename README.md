@@ -4,13 +4,10 @@ This repository is used for the CI/CD module of the Full Stack Open course
 
 The app is deployed at [here](https://fullstack-part11-0znc.onrender.com/).
 
-## Commands
+## Repository for tasks 11.21-11.22
 
-Start by running `npm install` inside the project folder
+The repository used for the last assignments is [here](https://github.com/Pekk4/fullstack-part11-task21)
 
-`npm start` to run the webpack dev server
-`npm test` to run tests
-`npm run eslint` to run eslint
-`npm run build` to make a production build
-`npm run start-prod` to run your production build
+### Task 11.17
 
+Ruleset used for assignment 11.17 is [here](./exercises/master_ruleset.json)
